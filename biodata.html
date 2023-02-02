@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Biodata</title>
+  </head>
+  <body>
+    <h1>Biodata</h1>
+    <nav>
+        <a href="dasboard.html">Halaman Utama</a> |
+        <a href="about.html">About Me</a> |
+        <a href="hobi.html">My Hobby</a> |
+        <a href="portofolio.html">Portofolio</a>
+    </nav>
+    <style>
+      body{
+        background-image: url(background5.jpg);
+      }
+      h1{
+          color:mediumblue ;
+          text-align: center;
+      }
+      a{
+          color: red;
+      }
+      .left-div{
+          width: auto;
+          display: inline-block;
+      }
+      .right-div{
+          display: inline-block;
+      }
+      .table{
+          align-content: center;
+          border-collapse: collapse;  
+          color: yellowgreen;  
+      }
+      th, td{
+          border: 1px solid blue;
+          padding: 7px 17px;
+      } 
+      .table tr th{
+          background-color:burlywood;
+          color: blue;
+          text-transform: uppercase;
+      }
+      .table tr td{
+          background-color: beige;
+          color:black  
+      } 
+      .table tr:hover td{
+          background-color: goldenrod;
+      }
+      .table td:hover{
+          background-color: gold !important;
+      } 
+    </style>
+
+    <header style="text-align: center;">
+        <img src="photo111.jpeg" width="300" height="280" style="border-radius: 55%;"/>
+        <h1>Kristian Fernando</h1>
+    </header>
+    <table class="table" align="center">
+        <tr>
+            <th width="200">DATA DIRI</td>
+            <th width="400">KETERANGAN</td> 
+        <tr>
+            <td>Nama :</td>
+          <td>Kristian Fernando</td>
+        </tr>
+        <tr>
+            <td>TTL :</td>
+          <td>Bengkulu, 16 November 2001</td>
+        </tr>
+        <tr>
+            <td>Alamat :</td>
+            <td>Pondok Kubang, Bengkulu Tengah, Bengkulu</td>
+            
+          </tr>
+          <tr>
+            <td>Agama :</td>
+            <td>Kristen</td>
+          </tr> 
+          <tr>
+            <td>Jenis Kelamin :</td>
+            <td>
+              <select name="jk">
+                <option value="1">Laki-laki</option>
+                <option value="2">Perempuan</option>
+              </select>
+            </td>
+          </tr>
+          <tr>
+            <td>Pekerjaan :</td>
+            <td id="pekerjaan">Mahasiswa</td>
+          </tr>
+          <script>
+            const pekerjaan = document.querySelector('#pekerjaan');
+            pekerjaan.addEventListener('click', updatePekerjaan);
+            function updatePekerjaan() {
+                const kerja = prompt('Apa pekerjaan mu:');
+                pekerjaan.textContent = kerja;
+            }
+          </script>
+      </table>
+  </body>
+</html>
